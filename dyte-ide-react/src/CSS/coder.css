@@ -1,0 +1,25 @@
+.selectedTab {
+    background-color: rgb(75, 75, 75);
+}
+
+.normalTab {
+    background-color: rgb(0, 0, 0);
+}
+
+.text-black {
+    color: black;
+}
+
+.text-white  { 
+    color: white;
+}
+
+.navbar {
+    background-color: black;
+    color: white;
+}
+
+.navbar-brand {
+    font-size: 20pt;
+}
+
