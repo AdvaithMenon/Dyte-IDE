@@ -64,7 +64,7 @@ class CSSCoder extends Component {
 
                 <Row>
                     <div style={{ padding: "40px 30px 5px 30px" }} className="container">
-                        <textarea id="css-text" style={{ padding: "10px 10px 10px 10px", height: "500px", width: "100%" }} onChange={this.submitCSS} onKeyDown={this.handleTab}>
+                        <textarea spellCheck={false} id="css-text" style={{ padding: "10px 10px 10px 10px", height: "500px", width: "100%" }} onChange={this.submitCSS} onKeyDown={this.handleTab}>
 
                         </textarea>
                     </div>

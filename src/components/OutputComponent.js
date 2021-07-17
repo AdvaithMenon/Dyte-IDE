@@ -6,7 +6,7 @@ class Output extends Component {
         super(props);
         
         this.updateAllCodes = this.updateAllCodes.bind(this);
-        this.updateAllCodes();
+        //this.updateAllCodes();
 
     }
 
@@ -16,6 +16,9 @@ class Output extends Component {
 
     updateAllCodes() {
         var output = document.getElementById("output");
+
+        if (!output) 
+            return;
 
         var style = "";
         var html = "";
@@ -61,11 +64,7 @@ class Output extends Component {
     render() {
         return (
             <Row>
-                <script id="scripter">
-
-                </script>
                 {this.placeholder()}
-
             </Row>
         );
     }
