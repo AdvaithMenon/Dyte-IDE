@@ -29,8 +29,12 @@ class CSSCoder extends Component {
 
     cleanCSSCode(code) {
         //console.log("Code before: " + code);
-        code = code.replaceAll("body", "#output");
-        code = code.replaceAll("html", "#output");
+        code = code.replaceAll(/body/gi, "#output");
+        code = code.replaceAll(/html/gi, "#output");
+
+        var pat = /\.([a-zA-Z]+\s)+\n*\r*{/g;
+    
+        code = code.replaceAll(pat, "#output " +  "$&");
         //console.log("Code after: " + code);
         return code;
     }

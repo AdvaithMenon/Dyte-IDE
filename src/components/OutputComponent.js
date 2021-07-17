@@ -16,16 +16,22 @@ class Output extends Component {
 
     updateAllCodes() {
         var output = document.getElementById("output");
-        //console.log("HTML = " + this.props.htmlCode);
+
+        var style = "";
+        var html = "";
+        var js = "";
+
         if (this.props.htmlCode)
-            output.innerHTML = this.props.htmlCode;
+            html = this.props.htmlCode;
 
         //console.log("CSS = " + this.props.cssCode);
         if (this.props.cssCode) 
-            output.innerHTML += "\n<style>" + this.props.cssCode + "</style>";
+            style = "<style>" + this.props.cssCode + "</style>";
 
         if (this.props.jsCode)
-            document.getElementById("scripter").innerHTML = this.props.jsCode;
+            js = "<script>" + this.props.jsCode + "</script>";
+        
+        output.innerHTML = style + "\n" + html + "\n" + js;
     }
 
 
