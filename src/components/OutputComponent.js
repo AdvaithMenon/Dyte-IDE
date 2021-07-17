@@ -19,7 +19,6 @@ class Output extends Component {
 
         var style = "";
         var html = "";
-        var js = "";
 
         if (this.props.htmlCode)
             html = this.props.htmlCode;
@@ -33,6 +32,8 @@ class Output extends Component {
 
         if (output != null)
             output.innerHTML = style + "\n" + html;
+
+        this.placeholder();
     }
 
 
@@ -43,19 +44,17 @@ class Output extends Component {
 
 
     placeholder() {
-        if (!this.props.htmlCode && !this.props.cssCode) {
-            return (
-                <div id="output" style={{ marginTop: "40px", padding: "5px 30px 5px 10px", height: "500px", width: "80%", border: "1px solid black", color: 'GrayText' }} className="container">
-                    Your Output Comes Here
-                </div>
-            );
+        console.log("HTML: " + this.props.htmlCode + "\nCSS: " + this.props.cssCode);
+        console.log(this.props.htmlCode.length + " " + this.props.cssCode.length);
+        if ((!this.props.htmlCode || this.props.htmlCode.length === 0) && (!this.props.cssCode || this.props.cssCode.length === 0)) {
+            var output = document.getElementById("output");
+            if (output) {
+                output.innerHTML = "Your output comes here...";
+                output.style.color = "GrayText";
+            }
         }
         else {
-            return (
-                <div id="output" style={{ marginTop: "40px", padding: "5px 30px 5px 10px", height: "500px", width: "80%", border: "1px solid black" }} className="container">
-
-                </div>
-            );
+            document.getElementById("output").style.color = "black";
         }
 
     }
@@ -70,7 +69,9 @@ class Output extends Component {
                 <script id="scripter">
 
                 </script>
-                {this.placeholder()}
+                <div id="output" style={{ marginTop: "40px", padding: "5px 30px 5px 10px", height: "500px", width: "80%", border: "1px solid black", color: 'GrayText' }} className="container">
+                
+                </div>
             </Row>
         );
     }

@@ -1,6 +1,7 @@
 # Deployed
 
-The app has been deployed at https://advaithmenon/github.io/dyte-ide/.
+The app has been deployed at https://advaithmenon/github.io/dyte-ide/
+Currently only supports HTML and CSS.
 
 # Create React App
 
