@@ -17,9 +17,6 @@ class Output extends Component {
     updateAllCodes() {
         var output = document.getElementById("output");
 
-        if (!output) 
-            return;
-
         var style = "";
         var html = "";
         var js = "";
@@ -34,7 +31,8 @@ class Output extends Component {
         if (this.props.jsCode)
             js = "<script>" + this.props.jsCode + "</script>";
         
-        output.innerHTML = style + "\n" + html + "\n" + js;
+        if (output != null)
+            output.innerHTML = style + "\n" + html + "\n" + js;
     }
 
 
