@@ -13,6 +13,7 @@ class Coder extends Component {
             activeTab : "1",
             htmlCode : "",
             cssCode : "",
+            jsCode : "",
         };
 
         this.setActiveTab = this.setActiveTab.bind(this);
@@ -48,7 +49,7 @@ class Coder extends Component {
 
     render() {
         return (
-            <React.Fragment>
+            <div>
                 <Row>
                     <Col sm={1} style={{height: "100%"}}>
                         <Nav className="flex-column" tabs>
@@ -85,7 +86,7 @@ class Coder extends Component {
                         <Output htmlCode={this.state.htmlCode} cssCode={this.state.cssCode} jsCode={this.state.jsCode} />
                     </Col>
                 </Row>
-            </React.Fragment>
+            </div>
         );
     }
 }

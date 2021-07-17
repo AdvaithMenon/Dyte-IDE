@@ -18,20 +18,15 @@ class JSCoder extends Component {
 
     submitJS() {
         var currentText = document.getElementById("js-text").value;
-        currentText = this.cleanJSCode(currentText);
         this.setState({
             JSCode : currentText
+        }, () => {
+            this.props.updateJS(this.state.JSCode);
         });
-        this.props.updateJS(this.state.JSCode);
+        
     }
 
-    cleanJSCode(code) {
-        //console.log("Code before: " + code);
-        code = code.replaceAll("body", "#output");
-        code = code.replaceAll("html", "#output");
-        //console.log("Code after: " + code);
-        return code;
-    }
+
 
 
 

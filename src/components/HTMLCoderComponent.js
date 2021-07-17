@@ -39,10 +39,9 @@ class HTMLCoder extends Component {
 
     handleTab(e) {
         var htmlText = document.getElementById("html-text");
+        e = e || window.event;
         if (e.key === "Tab") {
-            e = e || window.event;
             e.preventDefault();
-
             var end = htmlText.selectionEnd;
             var currentText = htmlText.value;
             htmlText.value = currentText.substring(0, htmlText.selectionStart) + "\t" + currentText.substring(htmlText.selectionStart, currentText.length);

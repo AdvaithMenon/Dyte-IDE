@@ -23,14 +23,17 @@ class CSSCoder extends Component {
         currentText = this.cleanCSSCode(currentText);
         this.setState({
             CSSCode : currentText
+        }, () => {
+            this.props.updateCSS(this.state.CSSCode);
         });
-        this.props.updateCSS(this.state.CSSCode);
+        
     }
 
     cleanCSSCode(code) {
         //console.log("Code before: " + code);
         code = code.replaceAll(/body/gi, "#output");
         code = code.replaceAll(/html/gi, "#output");
+        code = code.replaceAll("\"", "");
 
         var pat = /\.([a-zA-Z]+\s)+\n*\r*{/g;
     
@@ -64,7 +67,7 @@ class CSSCoder extends Component {
 
                 <Row>
                     <div style={{ padding: "40px 30px 5px 30px" }} className="container">
-                        <textarea spellCheck={false} id="css-text" style={{ padding: "10px 10px 10px 10px", height: "500px", width: "100%" }} onChange={this.submitCSS} onKeyDown={this.handleTab}>
+                        <textarea spellCheck={false} id="css-text" style={{ padding: "10px 10px 10px 10px", height: "500px", width: "100%" }} onFocus={this.submitCSS} onBlur={this.submitCSS} onChange={this.submitCSS} onKeyDown={this.handleTab}>
 
                         </textarea>
                     </div>

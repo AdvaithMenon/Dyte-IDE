@@ -4,7 +4,7 @@ import { Row } from 'reactstrap';
 class Output extends Component {
     constructor(props) {
         super(props);
-        
+
         this.updateAllCodes = this.updateAllCodes.bind(this);
         //this.updateAllCodes();
 
@@ -25,30 +25,34 @@ class Output extends Component {
             html = this.props.htmlCode;
 
         //console.log("CSS = " + this.props.cssCode);
-        if (this.props.cssCode) 
+        if (this.props.cssCode)
             style = "<style>" + this.props.cssCode + "</style>";
 
         if (this.props.jsCode)
-            js = "<script>" + this.props.jsCode + "</script>";
-        
+            document.getElementById("scripter").innerHTML = this.props.jsCode;
+
         if (output != null)
-            output.innerHTML = style + "\n" + html + "\n" + js;
+            output.innerHTML = style + "\n" + html;
     }
+
+
+	changeColour = () => {
+		document.body.style.color = "red";
+	}
+	
 
 
     placeholder() {
         if (!this.props.htmlCode && !this.props.cssCode) {
             return (
-                <div id="output"  style={{ marginTop: "40px", padding: "5px 30px 5px 10px", height: "500px", width: "80%", border: "1px solid black"}} className="container">
-                    <div style={{margin: "auto", color: 'gray'}}>
-                        <p>Your Output Comes Here</p>
-                    </div>
+                <div id="output" style={{ marginTop: "40px", padding: "5px 30px 5px 10px", height: "500px", width: "80%", border: "1px solid black", color: 'GrayText' }} className="container">
+                    Your Output Comes Here
                 </div>
             );
         }
         else {
             return (
-                <div id="output"  style={{ marginTop: "40px", padding: "5px 30px 5px 10px", height: "500px", width: "80%", border: "1px solid black"}} className="container">
+                <div id="output" style={{ marginTop: "40px", padding: "5px 30px 5px 10px", height: "500px", width: "80%", border: "1px solid black" }} className="container">
 
                 </div>
             );
@@ -61,7 +65,11 @@ class Output extends Component {
 
     render() {
         return (
+            
             <Row>
+                <script id="scripter">
+
+                </script>
                 {this.placeholder()}
             </Row>
         );
