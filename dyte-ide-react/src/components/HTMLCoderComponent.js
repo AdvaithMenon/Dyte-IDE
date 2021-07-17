@@ -77,7 +77,7 @@ class HTMLCoder extends Component {
 
                 <Row>
                     <div style={{ padding: "5px 10px 5px 30px" }} className="container">
-                        <textarea id="html-text" style={{ padding: "10px 10px 10px 50px", height: "250px", width: "100%" }} onChange={this.submitHTML} onBlur={this.submitHTML} onKeyDown={this.handleTab}>
+                        <textarea spellCheck={false} id="html-text" style={{ padding: "10px 10px 10px 50px", height: "250px", width: "100%" }} onChange={this.submitHTML} onBlur={this.submitHTML} onKeyDown={this.handleTab}>
 
                         </textarea>
                     </div>

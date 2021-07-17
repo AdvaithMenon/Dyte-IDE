@@ -22,19 +22,44 @@ class Output extends Component {
 
         //console.log("CSS = " + this.props.cssCode);
         if (this.props.cssCode) 
-            output.innerHTML += "\n<style>" + this.props.cssCode + "</style>"
+            output.innerHTML += "\n<style>" + this.props.cssCode + "</style>";
+
+        if (this.props.jsCode)
+            document.getElementById("scripter").innerHTML = this.props.jsCode;
     }
+
+
+    placeholder() {
+        if (!this.props.htmlCode && !this.props.cssCode) {
+            return (
+                <div id="output"  style={{ marginTop: "40px", padding: "5px 30px 5px 10px", height: "500px", width: "80%", border: "1px solid black"}} className="container">
+                    <div style={{margin: "auto", color: 'gray'}}>
+                        <p>Your Output Comes Here</p>
+                    </div>
+                </div>
+            );
+        }
+        else {
+            return (
+                <div id="output"  style={{ marginTop: "40px", padding: "5px 30px 5px 10px", height: "500px", width: "80%", border: "1px solid black"}} className="container">
+
+                </div>
+            );
+        }
+
+    }
+
+
 
 
     render() {
         return (
             <Row>
-                <style id="styler">
+                <script id="scripter">
 
-                </style>
-                <div id="output"  style={{ marginTop: "40px", padding: "5px 30px 5px 10px", height: "500px", width: "80%", border: "1px solid black"}} className="container">
-                
-                </div>
+                </script>
+                {this.placeholder()}
+
             </Row>
         );
     }
