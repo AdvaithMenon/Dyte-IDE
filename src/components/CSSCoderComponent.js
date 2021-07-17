@@ -20,6 +20,7 @@ class CSSCoder extends Component {
 
     submitCSS() {
         var currentText = document.getElementById("css-text").value;
+        //console.log("Got css code: " + currentText);
         currentText = this.cleanCSSCode(currentText);
         this.setState({
             CSSCode : currentText
@@ -30,15 +31,13 @@ class CSSCoder extends Component {
     }
 
     cleanCSSCode(code) {
-        //console.log("Code before: " + code);
         code = code.replaceAll(/body/gi, "#output");
         code = code.replaceAll(/html/gi, "#output");
         code = code.replaceAll("\"", "");
 
-        var pat = /\.([a-zA-Z]+\s)+\n*\r*{/g;
-    
+        var pat = /\.([a-zA-Z]+,*\s*)+\n*\r*{/g;
         code = code.replaceAll(pat, "#output " +  "$&");
-        //console.log("Code after: " + code);
+        code = code.replaceAll(/([a-zA-Z]+,*\s*)+\n*\r*{/g, "#output " + "$&");
         return code;
     }
 
