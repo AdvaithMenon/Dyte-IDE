@@ -1,6 +1,6 @@
 {
   "name": "dyte-ide-react",
-  "homepage": "https://AdvaithMenon.github.io/dyte-ide",
+  "homepage": "https://advaithmenon.github.io/dyte-ide",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3"
+    "gh-pages": "^3.2.3",
+    "react-router-dom": "^5.2.0"
   }
 }
