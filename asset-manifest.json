@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/AdvaithMenon/Dyte-IDE/dyte-ide-react/static/css/main.765c61ef.chunk.css",
+    "main.js": "/AdvaithMenon/Dyte-IDE/dyte-ide-react/static/js/main.aabd173f.chunk.js",
+    "main.js.map": "/AdvaithMenon/Dyte-IDE/dyte-ide-react/static/js/main.aabd173f.chunk.js.map",
+    "runtime-main.js": "/AdvaithMenon/Dyte-IDE/dyte-ide-react/static/js/runtime-main.635fa314.js",
+    "runtime-main.js.map": "/AdvaithMenon/Dyte-IDE/dyte-ide-react/static/js/runtime-main.635fa314.js.map",
+    "static/css/2.4be38407.chunk.css": "/AdvaithMenon/Dyte-IDE/dyte-ide-react/static/css/2.4be38407.chunk.css",
+    "static/js/2.b5f81528.chunk.js": "/AdvaithMenon/Dyte-IDE/dyte-ide-react/static/js/2.b5f81528.chunk.js",
+    "static/js/2.b5f81528.chunk.js.map": "/AdvaithMenon/Dyte-IDE/dyte-ide-react/static/js/2.b5f81528.chunk.js.map",
+    "static/js/3.52e1004d.chunk.js": "/AdvaithMenon/Dyte-IDE/dyte-ide-react/static/js/3.52e1004d.chunk.js",
+    "static/js/3.52e1004d.chunk.js.map": "/AdvaithMenon/Dyte-IDE/dyte-ide-react/static/js/3.52e1004d.chunk.js.map",
+    "index.html": "/AdvaithMenon/Dyte-IDE/dyte-ide-react/index.html",
+    "static/css/2.4be38407.chunk.css.map": "/AdvaithMenon/Dyte-IDE/dyte-ide-react/static/css/2.4be38407.chunk.css.map",
+    "static/css/main.765c61ef.chunk.css.map": "/AdvaithMenon/Dyte-IDE/dyte-ide-react/static/css/main.765c61ef.chunk.css.map",
+    "static/js/2.b5f81528.chunk.js.LICENSE.txt": "/AdvaithMenon/Dyte-IDE/dyte-ide-react/static/js/2.b5f81528.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.635fa314.js",
+    "static/css/2.4be38407.chunk.css",
+    "static/js/2.b5f81528.chunk.js",
+    "static/css/main.765c61ef.chunk.css",
+    "static/js/main.aabd173f.chunk.js"
+  ]
+}
