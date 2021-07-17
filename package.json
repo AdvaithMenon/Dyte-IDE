@@ -1,6 +1,10 @@
 {
   "name": "dyte-ide-react",
+<<<<<<< HEAD
   "homepage": "https://github.com/AdvaithMenon/dyte-ide/",
+=======
+  "homepage": "https://github.com/AdvaithMenon/dyte-ide-react",
+>>>>>>> 2420f8220f9f56eac1f52d1cefc796f1685483f9
   "version": "0.1.0",
   "private": true,
   "dependencies": {
